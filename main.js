@@ -19,8 +19,13 @@ let saynamaste = (req, resp) => {
     resp.send("Namaste India");
 }
 
+let wish = (req, resp) => {
+    resp.send("Wishing you all a very successful ASDM exam .. 👍🏽👍🏽👍🏽🌞🔆");
+}
+
 app.use(logger);
 app.use('/namaste', saynamaste);
+app.use('/wish', wish);
 app.use('/', sayhello);
 
 app.listen(8081, () => {
